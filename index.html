@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title> Does this work? </title>
-    </header>
 
-    <body>
-        <h1> Hello World </h1>
-        <p> GitHub Pages Test </p>
-        <button> <a href="https://www.google.com"> Press to Google </a> </button>
-    </body>
+<head>
+	<title> jQuery </title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<h2>Callback & Chaining Effects</h2>
+
+	<button id="btnToggle"> Toggle </button>
+
+	<div id="firstDiv" class="myDivs">
+		<p>This is first paragraph in first div</p>
+		<p>This is second paragraph in first div</p>
+	</div>
+	<div id="secondDiv" class="myDivs">
+		<p>This is third paragraph in second div</p>
+	</div>
+</body>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script>
+
+	$(document).ready(function ()
+	{
+		function print()
+		{
+			alert("Effect done");
+		}
+
+		$("#btnToggle").click(function ()
+		{
+			$("#firstDiv").slideUp(2000).slideDown(2000)
+				.fadeOut(1000).fadeIn(3000);
+		});
+	});
+</script>
+
 </html>
